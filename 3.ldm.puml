@@ -1,0 +1,51 @@
+@startuml ldm
+!pragma layout smetana
+left to right direction
+entity Class
+entity Student
+entity Teacher
+entity Enrollment
+entity ClassTeacher
+entity Class {
+  * classId: int    - Mã lớp học, tự động tăng
+  * className: string      - Tên lớp học
+  * startDate: datetime      - Thời gian bắt đầu
+  * endDate: datetime   - Thời gian kết thúc
+  * createdAt: datetime - Ngày tạo
+  * updatedAt: int      - Ngày cập nhật
+
+}
+entity Student {
+  * studentId: int    - Mã học sinh, tự động tăng
+  * studentName: string    - Tên học sinh
+  * gender: int        - Giới tính
+  * dob: datetime   - Ngày sinh
+  * status: int    - Trạng thái (Đang học, Đã tốt nghiệp, Bảo lưu, Nghỉ)
+  * createdAt: datetime - Ngày tạo
+  * updatedAt: int      - Ngày cập nhật
+}
+entity Teacher {
+  * teacherId: int - Mã giáo viên, tự động tăng
+  * teacherName: string    - Tên giáo viên
+  * gender: int    - Giới tính
+  * dob: datetime - Ngày sinh
+  * status: int    - Trạng thái (Đang dạy, đã nghỉ)
+  * createdAt: datetime - Ngày tạo
+  * updatedAt: int      - Ngày cập nhật
+}
+entity Enrollment {
+  * id: int    - Mã bản ghi, tự động tăng
+  * classId: int    - Mã lớp học
+  * studentId: int      - Mã lớp học
+  * createdAt: datetime - Ngày tạo
+  * updatedAt: int      - Ngày cập nhật
+}
+entity ClassTeacher {
+  * id: int    - Mã bản ghi, tự động tăng
+  * classId: int    - Mã lớp học
+  * teacherId: int  - Mã giáo viên
+  * createdAt: datetime - Ngày tạo
+  * updatedAt: int      - Ngày cập nhật
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml AD_TaxDeclaration_Create
+title Activity Diagram - Tạo tờ khai thuế
+start
+:Bấm nút "Tạo tờ khai";
+:Hiển thị form tờ khai thuế (**SCR_TaxDeclarationForm**);
+
+split
+:Nhập thông tin tờ khai;
+split again
+:Hỏi đáp với AI để điền thông tin;
+:Chỉnh sửa thông tin tờ khai;
+end split
+
+repeat
+  :Nhấn "Lưu";
+  :Kiểm tra dữ liệu;
+  if (Dữ liệu hợp lệ?) then (Có)
+    :Lưu tờ khai vào cơ sở dữ liệu\n(Write **ENT_TaxDeclaration**);
+    :Thông báo thành công;
+    :Cập nhật danh sách\n(Read **ENT_TaxDeclaration**);
+    stop
+  else (Không)
+    :Hiển thị lỗi validation;
+  endif
+repeat while (Chỉnh sửa thông tin?) is (Có)
+->Hủy thao tác;
+stop
+@enduml

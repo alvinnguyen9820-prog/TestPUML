@@ -1,0 +1,55 @@
+@startuml AD_ClassManager
+!pragma layout smetana
+title Activity Diagram - Quản lý lớp học
+
+start
+:Truy cập chức năng quản lý lớp học;
+
+!$screen_id = "SCR_ClassManager"
+if (Có quyền truy cập?) then (Có)
+  if (Có dữ liệu?) then (Có)
+    :Hiển thị danh sách\n(**$screen_id**);
+  else (Không)
+    stop
+  endif
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+:Chọn thao tác;
+
+switch (Thao tác?)
+case (Thêm mới)
+  :Thực hiện thêm mới lớp học
+  (Chi tiết tại AD_ClassManager_Create);
+
+case (Chỉnh sửa)
+  :Thực hiện chỉnh sửa lớp học
+  (Chi tiết tại AD_ClassManager_Edit);
+
+case (Xóa)
+  :Thực hiện xóa lớp học
+  (Chi tiết tại AD_ClassManager_Delete);
+
+case (Tìm kiếm)
+  :Thực hiện tìm kiếm lớp học
+  (Chi tiết tại AD_ClassManager_Search);
+
+case (Xem chi tiết)
+  :Hiển thị thông tin chi tiết
+  (Chi tiết tại AD_ClassManager_Detail);
+  
+case (Phân công giảng viên vào lớp học)
+  :Phân công giảng viên
+  (Chi tiết tại AD_ClassManager_AssignTeacher);
+  
+case (Thêm sinh viên vào lớp học)
+  :Phân công sinh viên vào lớp học
+  (Chi tiết tại AD_ClassManager_AssignStudent);
+  
+endswitch
+stop
+
+@enduml

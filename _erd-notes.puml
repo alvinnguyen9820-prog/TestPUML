@@ -1,0 +1,17 @@
+note top of Class
+  Lớp học
+end note
+note top of Student
+  Học sinh, sinh viên
+end note
+note top of Teacher
+  Giảng viên
+end note
+note top of Enrollment
+  ĐK học (Student–Class)
+  Biểu diễn quan hệ N–N
+end note
+note top of ClassTeacher
+  Phân công giảng dạy (Teacher–Class)
+  Biểu diễn quan hệ N–N
+end note

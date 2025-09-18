@@ -1,0 +1,5 @@
+Class     ||..o{ Enrollment : "1 Class – nhiều Enrollment"
+Student   ||..o{ Enrollment : "1 Student – nhiều Enrollment"
+
+Class     ||..o{ ClassTeacher : "1 Class – nhiều ClassTeacher"
+Teacher   ||..o{ ClassTeacher : "1 Teacher – nhiều ClassTeacher" 

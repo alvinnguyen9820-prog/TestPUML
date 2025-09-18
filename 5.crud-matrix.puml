@@ -1,0 +1,8 @@
+@startuml CRUD_Matrix
+note as CRUD_Matrix
+| Entity / Usecase | LegalDocument | Payment_Connect | TaxDeclaration_Create |
+| TaxDeclaration   | -             | -               | C R                   |
+| PaymentMethod    | -             | C R             | -                     |
+| LegalDocument    | C R U D       | -               | -                     |
+end note
+@enduml

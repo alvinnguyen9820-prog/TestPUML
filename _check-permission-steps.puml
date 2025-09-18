@@ -1,0 +1,11 @@
+if (Có quyền truy cập?) then (Có)
+  if (Có dữ liệu?) then (Có)
+    :Hiển thị danh sách\n(**$screen_id**);
+  else (Không)
+    stop
+  endif
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif

@@ -1,0 +1,36 @@
+@startuml erd
+!pragma layout smetana
+left to right direction
+entity Class #A5D6A7
+entity Student
+entity Teacher
+entity Enrollment
+entity ClassTeacher
+
+note top of Class
+  Lớp học
+end note
+note top of Student
+  Học sinh, sinh viên
+end note
+note top of Teacher
+  Giảng viên
+end note
+note top of Enrollment
+  ĐK học (Student–Class)
+  Biểu diễn quan hệ N–N
+end note
+note top of ClassTeacher
+  Phân công giảng dạy (Teacher–Class)
+  Biểu diễn quan hệ N–N
+end note
+
+Class     ||..o{ Enrollment : "1 Class – nhiều Enrollment"
+Student   ||..o{ Enrollment : "1 Student – nhiều Enrollment"
+
+Class     ||..o{ ClassTeacher : "1 Class – nhiều ClassTeacher"
+Teacher   ||..o{ ClassTeacher : "1 Teacher – nhiều ClassTeacher" 
+
+@enduml
+
+

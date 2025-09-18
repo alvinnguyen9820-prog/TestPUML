@@ -1,0 +1,14 @@
+' Bảng mã màu dùng cho PlantUML
+' Copy mã màu trực tiếp khi cần dùng cho line
+!define COLOR1 #e6194b ' Đỏ tươi
+!define COLOR2 #3cb44b ' Xanh lá
+!define COLOR3 #ffe119 ' Vàng
+!define COLOR4 #4363d8 ' Xanh dương
+!define COLOR5 #f58231 ' Cam
+!define COLOR6 #911eb4 ' Tím
+!define COLOR7 #46f0f0 ' Xanh ngọc
+!define COLOR8 #f032e6 ' Hồng tím
+!define COLOR9 #bcf60c ' Vàng chanh
+!define COLOR10 #fabebe ' Hồng nhạt
+!define COLOR11 #008080 ' Xanh teal
+!define COLOR12 #e6beff ' Tím nhạt

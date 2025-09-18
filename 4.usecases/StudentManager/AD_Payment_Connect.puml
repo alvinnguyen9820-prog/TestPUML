@@ -1,0 +1,24 @@
+@startuml AD_Payment_Connect
+title Activity Diagram - Kết nối ngân hàng/ví điện tử
+start
+:Người dùng chọn kết nối ngân hàng / ví điện tử;
+split
+  :Hiển thị danh sách các kết nối đã có\n (**SCR_PaymentConnect**);
+  stop;
+split again
+  :Hiển thị danh sách các loại\nkết nối hỗ trợ cùng các lựa chọn\n(**SCR_PaymentConnect**);
+  :Chọn loại kết nối (ngân hàng/ ví điện tử);
+  :Xác thực kết nối (bằng app ngân hàng / ví điện tử / OTP)\n;
+  while (Xác thực thành công?) is (Không)
+    :Thông báo xác thực thất bại;
+    if (Thử lại?) then (Không)
+      stop
+    else (Có)
+      :Xác thực lại;
+    endif
+  endwhile (Có)
+  :Lưu thông tin kết nối\n (Write **ENT_PaymentMethod**);
+  :Thông báo kết nối thành công;
+end split
+stop
+@enduml
