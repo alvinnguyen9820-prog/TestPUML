@@ -22,7 +22,7 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
    * Chỉnh sửa: Thực hiện chỉnh sửa lớp học (chi tiết tại use case tương ứng).
    * Xóa: Thực hiện xóa lớp học (chi tiết tại use case tương ứng).
    * Tìm kiếm: Thực hiện tìm kiếm lớp học (chi tiết tại use case tương ứng).
-   * Xem chi tiết: Hiển thị thông tin chi tiết lớp học (hi tiết tại use case tương ứng). 
+   * Xem chi tiết: Hiển thị thông tin chi tiết lớp học (chi tiết tại use case tương ứng). 
    * Phân công giảng viên: Thực hiện phân công giảng viên vào lớp học (chi tiết tại use case tương ứng).
    * Phân công sinh viên: Thực hiện phân công sinh viên vào lớp học (chi tiết tại use case tương ứng).
 

@@ -11,6 +11,7 @@ entity Class {
   * className: string      - Tên lớp học
   * startDate: datetime      - Thời gian bắt đầu
   * endDate: datetime   - Thời gian kết thúc
+  * countStudent: int      - Tổng số lượng sinh viên được phân công
   * createdAt: datetime - Ngày tạo
   * updatedAt: int      - Ngày cập nhật
 
