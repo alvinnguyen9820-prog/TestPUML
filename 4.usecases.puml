@@ -10,7 +10,7 @@ actor "Sinh viên" as Student
 '==================== CỘT TRÁI: Quản trị ====================
 
 
-package "Quản lý giảng viên" as P_TeacherMgmt {
+package "Quản lý giảng viên đại học" as P_TeacherMgmt {
   usecase "Xem danh sách giảng viên" as UC_T_List
   usecase "Xem chi tiết thông tin giảng viên" as UC_T_Detail
   usecase "Thêm mới thông tin giảng viên" as UC_T_Create
