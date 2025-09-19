@@ -7,8 +7,13 @@ start
 
 if (Có quyền truy cập?) then (Có)
   :Hiển thị màn hình\n(**SCR_ClassCreate**);
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
   
-  :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu/kết thúc);
+  :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu, thời gian kết thúc);
 
   :Chọn thao tác;
 
@@ -20,7 +25,6 @@ if (Có quyền truy cập?) then (Có)
           if (Ghi thành công?) then (Có)
             :Thông báo "Thêm mới lớp học thành công";
             :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
-            stop
           else (Không)
             :Thông báo lỗi hệ thống;
             :Ở lại màn hình màn hình\n(**SCR_ClassCreate**);
@@ -29,22 +33,14 @@ if (Có quyền truy cập?) then (Có)
         :Thông báo lỗi "Nhập đầy đủ trường thông tin bắt buộc"";
         :Ở lại màn hình\n(**SCR_ClassCreate**);
       endif
-
     case (Đóng)
       :Xác nhận hủy thao tác?;
       if (Đồng ý?) then (Có)
         :Hủy thao tác;
         :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
-        stop
       else (Không)
         :Ở lại màn hình\n(**SCR_ClassCreate**);
       endif
   endswitch
-else (Không)
-  :Thông báo không có quyền truy cập;
-  :Chuyển hướng đến trang chính;
   stop
-endif
-
-stop
 @enduml

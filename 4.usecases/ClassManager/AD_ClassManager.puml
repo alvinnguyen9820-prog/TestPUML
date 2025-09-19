@@ -26,7 +26,7 @@ case (Thêm mới)
 
 case (Chỉnh sửa)
   :Thực hiện chỉnh sửa lớp học
-  (Chi tiết tại AD_ClassManager_Edit);
+  (Chi tiết tại AD_ClassManager_Update);
 
 case (Xóa)
   :Thực hiện xóa lớp học

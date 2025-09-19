@@ -1,0 +1,38 @@
+@startuml AD_ClassManager_Detail
+!pragma layout smetana
+title Activity Diagram: Xem chi tiết lớp học
+
+start
+:Truy cập chức năng "Xem chi tiết lớp học";
+if (Có quyền truy cập?) then (Có)
+    :Hiển thị màn hình\n(**SCR_ClassDetail**);
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+  :Chọn thao tác;
+
+  switch (Thao tác?)
+    case (Xóa)
+      :Chuyển sang popup "Xóa lớp học"
+      (Chi tiết tại AD_ClassManager_Delete);
+
+    case (Phân công giảng viên)
+      :Chuyển sang popup "Phân công giảng viên vào lớp học"
+      (Chi tiết tại AD_ClassManager_AssignTeacher);
+
+    case (Phân công sinh viên)
+      :Chuyển sang popup "Phân công sinh viên vào lớp học"
+      (Chi tiết tại AD_ClassManager_AssignStudent);
+
+    case (Đóng)
+      :Xác nhận đóng?;
+      if (Đồng ý?) then (Có)
+        :Quay về danh sách lớp học\n(**SCR_ClassManager**);
+      else (Không)
+        :Ở lại màn hình\n(**SCR_ClassDetail**);
+      endif
+  endswitch
+  stop
+@enduml
