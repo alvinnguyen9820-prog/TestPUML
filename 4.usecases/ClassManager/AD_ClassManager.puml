@@ -5,10 +5,9 @@ title Activity Diagram - Quản lý lớp học
 start
 :Truy cập chức năng quản lý lớp học;
 
-!$screen_id = "SCR_ClassManager"
 if (Có quyền truy cập?) then (Có)
   if (Có dữ liệu?) then (Có)
-    :Hiển thị danh sách\n(**$screen_id**);
+    :Hiển thị danh sách\n(**SCR_ClassManager**);
   else (Không)
     stop
   endif

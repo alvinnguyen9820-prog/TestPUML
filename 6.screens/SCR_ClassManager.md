@@ -16,10 +16,9 @@ Nơi tập trung để xem và quản lý lớp học.
 
 | Trường thông tin   | Control     | Field   | Max length | Bắt buộc (Y/N) | Giá trị mặc định | Cho phép sửa (Y/N) | Mô tả                                       |
 | :----------------- | :---------- | :------ | :--------- | :------------- | :--------------- | :----------------- | :------------------------------------------ |
-| Tên lớp học        | textbox     | lopHoc  | 100        | Y              |                  | Y                  | Thông tin tên lớp học                       |
-| Số lượng sinh viên | numericbox  | nam     | 6          | Y              | 50               | Y                  | Thông tin số lượng sinh viên trong lớp học. |
-| Thời gian bắt đầu  | date picker | batDau  | -          | Y              | Ngày hiện tại    | Y                  | Thời gian bắt đầu lớp học                   |
-| Thời gian kết thúc | date picker | ketThuc | -          | Y              |                  | Y                  | Thời gian kết thúc lớp học                  |
+| Tên lớp học        | textbox     | className  | 100        | Y              |                  | Y                  | Thông tin tên lớp học                       |
+| Thời gian bắt đầu  | date picker | startDate  | -          | Y              | Ngày hiện tại    | Y                  | Thời gian bắt đầu lớp học                   |
+| Thời gian kết thúc | date picker | endDate | -          | Y              |                  | Y                  | Thời gian kết thúc lớp học                  |
 
 
 

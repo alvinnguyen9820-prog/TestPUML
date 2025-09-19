@@ -1,0 +1,46 @@
+@startuml AD_ClassManager_Search
+!pragma layout smetana
+title Activity Diagram: Tìm kiếm lớp học
+
+start
+:Truy cập chức năng "Tìm kiếm lớp học";
+
+if (Có quyền truy cập?) then (Có)
+  :Hiển thị màn hình\n(**SCR_ClassManager**);
+
+  :Nhập điều kiện tìm kiếm\n(Tên lớp học, ngày bắt đầu, ngày kết thúc);
+
+  :Chọn thao tác;
+
+  switch (Thao tác?)
+    case (Tìm kiếm)
+      :Kiểm tra tính hợp lệ điều kiện;
+      if (Hợp lệ?) then (Đúng)
+        :Thực hiện truy vấn tìm kiếm;
+        if (Có kết quả?) then (Có)
+          :Hiển thị danh sách kết quả\n(có phân trang/sắp xếp);
+          :Ở lại màn hình\n(**SCR_ClassManager**);
+        else (Không)
+          :Thông báo "Không có dữ liệu phù hợp\nvới từ khóa tìm kiếm";
+          :Ở lại màn hình\n(**SCR_ClassManager**);
+        endif
+      else (Sai)
+        :Thông báo lỗi "Điều kiện tìm kiếm không hợp lệ";
+        :Ở lại màn hình\n(**SCR_ClassManager**);
+      endif
+
+    case (Xóa lọc)
+      :Xóa toàn bộ điều kiện tìm kiếm;
+      :Tải lại danh sách mặc định;
+      :Ở lại màn hình\n(**SCR_ClassManager**);
+
+  endswitch
+
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+stop
+@enduml

@@ -1,0 +1,61 @@
+@startuml AD_ClassManager_Update
+!pragma layout smetana
+title Activity Diagram: Chỉnh sửa lớp học
+
+start
+:Truy cập chức năng "Chỉnh sửa lớp học";
+
+if (Có quyền truy cập?) then (Có)
+  :Tìm kiếm lớp học 
+   (Chi tiết tại AD_ClassManager_Create);
+
+  if (Tồn tại lớp học?) then (Có)
+    :Hiển thị màn hình\n(**SCR_ClassUpdate**);
+
+    :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu/kết thúc);
+
+    :Chọn thao tác;
+
+    switch (Thao tác?)
+      case (Lưu)
+        :Kiểm tra tính hợp lệ dữ liệu;
+        if (Hợp lệ?) then (Đúng)
+          :Ghi nhận cập nhật lớp học;
+          if (Ghi thành công?) then (Có)
+            :Thông báo "Chỉnh sửa lớp học thành công";
+            :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
+            stop
+          else (Không)
+            :Thông báo lỗi hệ thống;
+            :Ở lại màn hình\n(**SCR_ClassUpdate**);
+          endif
+        else (Sai)
+          :Thông báo lỗi "Nhập đầy đủ trường thông tin bắt buộc";
+          :Ở lại màn hình\n(**SCR_ClassUpdate**);
+        endif
+
+      case (Đóng)
+        :Xác nhận hủy thao tác?;
+        if (Đồng ý?) then (Có)
+          :Hủy thao tác;
+          :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
+          stop
+        else (Không)
+          :Ở lại màn hình\n(**SCR_ClassUpdate**);
+        endif
+    endswitch
+
+  else (Không)
+    :Thông báo "Không tìm thấy lớp học";
+    :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
+    stop
+  endif
+
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+stop
+@enduml
