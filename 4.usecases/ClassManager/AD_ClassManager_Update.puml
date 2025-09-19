@@ -7,12 +7,17 @@ start
 
 if (Có quyền truy cập?) then (Có)
   :Tìm kiếm lớp học 
-   (Chi tiết tại AD_ClassManager_Create);
+   (Chi tiết tại AD_ClassManager_Search);
+   else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
 
   if (Tồn tại lớp học?) then (Có)
     :Hiển thị màn hình\n(**SCR_ClassUpdate**);
 
-    :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu/kết thúc);
+    :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu, thời gian kết thúc);
 
     :Chọn thao tác;
 
@@ -24,7 +29,6 @@ if (Có quyền truy cập?) then (Có)
           if (Ghi thành công?) then (Có)
             :Thông báo "Chỉnh sửa lớp học thành công";
             :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
-            stop
           else (Không)
             :Thông báo lỗi hệ thống;
             :Ở lại màn hình\n(**SCR_ClassUpdate**);
@@ -39,7 +43,6 @@ if (Có quyền truy cập?) then (Có)
         if (Đồng ý?) then (Có)
           :Hủy thao tác;
           :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
-          stop
         else (Không)
           :Ở lại màn hình\n(**SCR_ClassUpdate**);
         endif
@@ -50,12 +53,5 @@ if (Có quyền truy cập?) then (Có)
     :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
     stop
   endif
-
-else (Không)
-  :Thông báo không có quyền truy cập;
-  :Chuyển hướng đến trang chính;
-  stop
-endif
-
 stop
 @enduml
