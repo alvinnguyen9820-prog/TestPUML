@@ -17,7 +17,7 @@ Popup phân cong sinh viên
 | Tên      | Loại   | Mô tả                                  |
 | :------- | :----- | :------------------------------------- |
 | Xác nhận | Button | Click để thực hiện phân công sinh viên |
-| Đóng     | Button | Click vào đóng popup                   |
+| Đóng     | Button | Click vào đóng popup theo                   |
 
 </div>
 

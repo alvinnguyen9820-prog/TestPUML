@@ -29,7 +29,7 @@ Popup xem thông tin chi tiết lớp học, xem danh sinh viên và giảng vi�
 | Trường thông tin | Control | Field       | Max length | Bắt buộc (Y/N) | Giá trị mặc định | Cho phép sửa (Y/N) | Mô tả         |
 | :--------------- | :------ | :---------- | :--------- | :------------- | :--------------- | :----------------- | :------------ |
 | STT              | text    | -           | -          | -              |                  | -                  | STT           |
-| Tên sinh viên    | text    | studentName | -          | -              |                  | -                  | Tên sinh vien |
+| Tên sinh viên    | text    | studentName | -          | -              |                  | -                  | Tên sinh viên |
 
 </div>
 
@@ -40,7 +40,7 @@ Popup xem thông tin chi tiết lớp học, xem danh sinh viên và giảng vi�
 | Trường thông tin | Control | Field       | Max length | Bắt buộc (Y/N) | Giá trị mặc định | Cho phép sửa (Y/N) | Mô tả          |
 | :--------------- | :------ | :---------- | :--------- | :------------- | :--------------- | :----------------- | :------------- |
 | STT              | text    | -           | -          | -              |                  | -                  | STT            |
-| Tên giảng viên   | text    | teacherName | -          | -              |                  | -                  | Tên giảng vien |
+| Tên giảng viên   | text    | teacherName | -          | -              |                  | -                  | Tên giảng viên |
 
 </div>
 

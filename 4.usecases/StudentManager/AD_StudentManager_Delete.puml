@@ -1,0 +1,43 @@
+@startuml AD_StudentManager_Delete
+!pragma layout smetana
+title Activity Diagram: Xóa sinh viên (Popup)
+
+start
+:Truy cập chức năng "Xóa sinh viên";
+
+if (Có quyền truy cập?) then (Có)
+  :Hiển thị popup xác nhận xóa\n(**SCR_StudentDelete**);
+
+  switch (Xác nhận xóa?)
+    case (Đồng ý)
+      :Kiểm tra điều kiện/xung đột xóa\n(đang phân công GV/SV, đã khóa...);
+        if (Đủ điều kiện xóa?) then (Đủ)
+          :Thực hiện xóa sinh viên;
+          if (Xóa thành công?) then (Có)
+            :Thông báo "Xóa sinh viên thành công";
+            :Đóng popup;
+            :Chuyển hướng về danh sách\n(**SCR_StudentManager**);
+          else (Không)
+            :Thông báo lỗi hệ thống;
+            :Ở lại popup\n(**SCR_StudentDelete**);
+          endif
+        else (Không)
+          :Thông báo "Không thể xóa do đang có phân công/đăng ký";
+          :Ở lại popup\n(**SCR_StudentDelete**);
+        endif
+    case (Đóng)
+      :Xác nhận đóng?;
+      if (Đồng ý?) then (Có)
+        :Quay về danh sách sinh viên\n(**SCR_StudentManager**);
+      else (Không)
+        :Ở lại màn hình\n(**SCR_StudentDelete**);
+      endif
+  endswitch
+
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Đóng popup;
+  :Chuyển hướng đến trang chính;
+endif
+stop
+@enduml

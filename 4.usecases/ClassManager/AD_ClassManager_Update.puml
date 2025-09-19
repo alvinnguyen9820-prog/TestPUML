@@ -26,7 +26,7 @@ endif
         :Kiểm tra tính hợp lệ dữ liệu;
         if (Hợp lệ?) then (Đúng)
           :Ghi nhận cập nhật lớp học;
-          if (Ghi thành công?) then (Có)
+          if (Cập nhật thành công?) then (Có)
             :Thông báo "Chỉnh sửa lớp học thành công";
             :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
           else (Không)

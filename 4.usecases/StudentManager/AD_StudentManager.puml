@@ -1,0 +1,46 @@
+@startuml AD_StudentManager
+!pragma layout smetana
+title Activity Diagram - Quản lý sinh viên
+
+start
+:Truy cập chức năng quản lý sinh viên;
+
+if (Có quyền truy cập?) then (Có)
+  if (Có dữ liệu?) then (Có)
+    :Hiển thị danh sách\n(**SCR_StudentManager**);
+  else (Không)
+    stop
+  endif
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+:Chọn thao tác;
+
+switch (Thao tác?)
+case (Thêm mới)
+  :Thực hiện thêm mới sinh viên
+  (Chi tiết tại AD_StudentManager_Create);
+
+case (Chỉnh sửa)
+  :Thực hiện chỉnh sửa sinh viên
+  (Chi tiết tại AD_StudentManager_Update);
+
+case (Xóa)
+  :Thực hiện xóa sinh viên
+  (Chi tiết tại AD_StudentManager_Delete);
+
+case (Tìm kiếm)
+  :Thực hiện tìm kiếm sinh viên
+  (Chi tiết tại AD_StudentManager_Search);
+
+case (Xem chi tiết)
+  :Hiển thị thông tin chi tiết
+  (Chi tiết tại AD_StudentManager_Detail);
+  
+endswitch
+stop
+
+@enduml

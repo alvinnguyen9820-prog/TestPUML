@@ -1,0 +1,30 @@
+@startuml AD_StudentManager_Detail
+!pragma layout smetana
+title Activity Diagram: Xem chi tiết sinh viên
+
+start
+:Truy cập chức năng "Xem chi tiết sinh viên";
+if (Có quyền truy cập?) then (Có)
+    :Hiển thị màn hình\n(**SCR_StudentDetail**);
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+  :Chọn thao tác;
+
+  switch (Thao tác?)
+    case (Xóa)
+      :Chuyển sang popup "Xóa sinh viên"
+      (Chi tiết tại AD_StudentManager_Delete);
+
+    case (Đóng)
+      :Xác nhận đóng?;
+      if (Đồng ý?) then (Có)
+        :Quay về danh sách sinh viên\n(**SCR_StudentManager**);
+      else (Không)
+        :Ở lại màn hình\n(**SCR_StudentDetail**);
+      endif
+  endswitch
+  stop
+@enduml

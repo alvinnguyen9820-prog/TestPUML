@@ -16,9 +16,9 @@ Popup thêm mới lớp học, phân công sinh viên và giảng viên vào l�
 
 | Trường thông tin   | Control         | Field     | Max length | Bắt buộc (Y/N) | Giá trị mặc định | Cho phép sửa (Y/N) | Mô tả                               |
 | :----------------- | :-------------- | :-------- | :--------- | :------------- | :--------------- | :----------------- | :---------------------------------- |
-| Tên lớp học        | text            | className | -          | -              |                  | -                  | Thông tin tên lớp học               |
-| Thời gian bắt đầu  | dateime         | startDate | -          | -              |                  | -                  | Thời gian bắt đầu lớp học           |
-| Thời gian kết thúc | dateime         | endDate   | -          | -              |                  | -                  | Thời gian kết thúc lớp học          |
+| Tên lớp học        | text            | className | -          | Y              |                  | -                  | Thông tin tên lớp học               |
+| Thời gian bắt đầu  | dateime         | startDate | -          | Y              | Ngày hiện tại    | -                  | Thời gian bắt đầu lớp học           |
+| Thời gian kết thúc | dateime         | endDate   | -          | Y              |                  | -                  | Thời gian kết thúc lớp học          |
 | Sinh viên          | combobox search |           | -          | -              |                  | -                  | Chọn sinh viên từ danh sách đã tạo  |
 | Giảng viên         | combobox search |           | -          | -              |                  | -                  | Chọn giảng viên từ danh sách đã tạo |
 

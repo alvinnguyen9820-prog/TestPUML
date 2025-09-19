@@ -17,8 +17,8 @@ entity Class {
 
 }
 entity Student {
-  * studentId: int    - Mã học sinh, tự động tăng
-  * studentName: string    - Tên học sinh
+  * studentId: int    - Mã sinh viên, tự động tăng
+  * studentName: string    - Tên sinh viên
   * gender: int        - Giới tính
   * dob: datetime   - Ngày sinh
   * status: int    - Trạng thái (Đang học, Đã tốt nghiệp, Bảo lưu, Nghỉ)
@@ -26,8 +26,8 @@ entity Student {
   * updatedAt: int      - Ngày cập nhật
 }
 entity Teacher {
-  * teacherId: int - Mã giáo viên, tự động tăng
-  * teacherName: string    - Tên giáo viên
+  * teacherId: int - Mã giảng viên, tự động tăng
+  * teacherName: string    - Tên giảng viên
   * gender: int    - Giới tính
   * dob: datetime - Ngày sinh
   * status: int    - Trạng thái (Đang dạy, đã nghỉ)
@@ -44,7 +44,7 @@ entity Enrollment {
 entity ClassTeacher {
   * id: int    - Mã bản ghi, tự động tăng
   * classId: int    - Mã lớp học
-  * teacherId: int  - Mã giáo viên
+  * teacherId: int  - Mã giảng viên
   * createdAt: datetime - Ngày tạo
   * updatedAt: int      - Ngày cập nhật
 }

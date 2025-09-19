@@ -1,0 +1,46 @@
+@startuml AD_TeacherManager_Create
+!pragma layout smetana
+title Activity Diagram: Thêm mới giảng viên
+
+start
+:Truy cập chức năng "Thêm mới giảng viên";
+
+if (Có quyền truy cập?) then (Có)
+  :Hiển thị màn hình\n(**SCR_TeacherCreate**);
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+  
+  :Nhập thông tin giảng viên\n(tên giảng viên, giới tính, ngày sinh, trạng thái);
+
+  :Chọn thao tác;
+
+  switch (Thao tác?)
+    case (Lưu)
+      :Kiểm tra tính hợp lệ dữ liệu;
+      if (Hợp lệ?) then (Đúng)
+        :Ghi nhận dữ liệu giảng viên;
+          if (Ghi thành công?) then (Có)
+            :Thông báo "Thêm mới giảng viên thành công";
+            :Chuyển hướng về danh sách\n(**SCR_TeacherManager**);
+          else (Không)
+            :Thông báo lỗi hệ thống;
+            :Ở lại màn hình màn hình\n(**SCR_TeacherCreate**);
+          endif
+      else (Sai)
+        :Thông báo lỗi "Nhập đầy đủ trường thông tin bắt buộc"";
+        :Ở lại màn hình\n(**SCR_TeacherCreate**);
+      endif
+    case (Đóng)
+      :Xác nhận hủy thao tác?;
+      if (Đồng ý?) then (Có)
+        :Hủy thao tác;
+        :Chuyển hướng về danh sách\n(**SCR_TeacherManager**);
+      else (Không)
+        :Ở lại màn hình\n(**SCR_TeacherCreate**);
+      endif
+  endswitch
+  stop
+@enduml

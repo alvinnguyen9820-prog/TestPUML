@@ -1,0 +1,57 @@
+@startuml AD_StudentManager_Update
+!pragma layout smetana
+title Activity Diagram: Chỉnh sửa sinh viên
+
+start
+:Truy cập chức năng "Chỉnh sửa sinh viên";
+
+if (Có quyền truy cập?) then (Có)
+  :Tìm kiếm sinh viên 
+   (Chi tiết tại AD_StudentManager_Search);
+   else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+  if (Tồn tại sinh viên?) then (Có)
+    :Hiển thị màn hình\n(**SCR_StudentUpdate**);
+
+    :Nhập thông tin sinh viên\n(tên sinh viên, giới tính, ngày sinh, trạng thái);
+
+    :Chọn thao tác;
+
+    switch (Thao tác?)
+      case (Lưu)
+        :Kiểm tra tính hợp lệ dữ liệu;
+        if (Hợp lệ?) then (Đúng)
+          :Ghi nhận cập nhật sinh viên;
+          if (Cập nhật thành công?) then (Có)
+            :Thông báo "Chỉnh sửa sinh viên thành công";
+            :Chuyển hướng về danh sách\n(**SCR_StudentManager**);
+          else (Không)
+            :Thông báo lỗi hệ thống;
+            :Ở lại màn hình\n(**SCR_StudentUpdate**);
+          endif
+        else (Sai)
+          :Thông báo lỗi "Nhập đầy đủ trường thông tin bắt buộc";
+          :Ở lại màn hình\n(**SCR_StudentUpdate**);
+        endif
+
+      case (Đóng)
+        :Xác nhận hủy thao tác?;
+        if (Đồng ý?) then (Có)
+          :Hủy thao tác;
+          :Chuyển hướng về danh sách\n(**SCR_StudentManager**);
+        else (Không)
+          :Ở lại màn hình\n(**SCR_StudentUpdate**);
+        endif
+    endswitch
+
+  else (Không)
+    :Thông báo "Không tìm thấy sinh viên";
+    :Chuyển hướng về danh sách\n(**SCR_StudentManager**);
+    stop
+  endif
+stop
+@enduml

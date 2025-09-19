@@ -1,0 +1,57 @@
+@startuml AD_TeacherManager_Update
+!pragma layout smetana
+title Activity Diagram: Chỉnh sửa giảng viên
+
+start
+:Truy cập chức năng "Chỉnh sửa giảng viên";
+
+if (Có quyền truy cập?) then (Có)
+  :Tìm kiếm giảng viên 
+   (Chi tiết tại AD_TeacherManager_Search);
+   else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+  stop
+endif
+
+  if (Tồn tại giảng viên?) then (Có)
+    :Hiển thị màn hình\n(**SCR_TeacherUpdate**);
+
+    :Nhập thông tin giảng viên\n(tên giảng viên, giới tính, ngày sinh, trạng thái);
+
+    :Chọn thao tác;
+
+    switch (Thao tác?)
+      case (Lưu)
+        :Kiểm tra tính hợp lệ dữ liệu;
+        if (Hợp lệ?) then (Đúng)
+          :Ghi nhận cập nhật giảng viên;
+          if (Cập nhật thành công?) then (Có)
+            :Thông báo "Chỉnh sửa giảng viên thành công";
+            :Chuyển hướng về danh sách\n(**SCR_TeacherManager**);
+          else (Không)
+            :Thông báo lỗi hệ thống;
+            :Ở lại màn hình\n(**SCR_TeacherUpdate**);
+          endif
+        else (Sai)
+          :Thông báo lỗi "Nhập đầy đủ trường thông tin bắt buộc";
+          :Ở lại màn hình\n(**SCR_TeacherUpdate**);
+        endif
+
+      case (Đóng)
+        :Xác nhận hủy thao tác?;
+        if (Đồng ý?) then (Có)
+          :Hủy thao tác;
+          :Chuyển hướng về danh sách\n(**SCR_TeacherManager**);
+        else (Không)
+          :Ở lại màn hình\n(**SCR_TeacherUpdate**);
+        endif
+    endswitch
+
+  else (Không)
+    :Thông báo "Không tìm thấy giảng viên";
+    :Chuyển hướng về danh sách\n(**SCR_TeacherManager**);
+    stop
+  endif
+stop
+@enduml

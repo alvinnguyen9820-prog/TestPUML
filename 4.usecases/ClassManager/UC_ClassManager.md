@@ -1,4 +1,4 @@
-# Use Case: Quản lý Văn bản quy phạm pháp luật (lớp học)
+# Use Case: Quản lý loớ hoọ
 
 ## Mục đích
 
@@ -6,7 +6,7 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
 
 ## Tác nhân chính
 
-* Người dùng (có quyền quản lý lớp học)
+* Admin
 
 ## Tiền điều kiện
 
@@ -40,6 +40,6 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
 
 ## Liên kết
 
-* Activity Diagram: [AD\_ClassManager.puml](AD_LegalDocument.puml)
-* Form liên quan: **SCR\_ClassManager**
-* Các use case chi tiết: AD\_ClassManager\_Create, AD\_ClassManager\_Edit, AD\_ClassManager\_Delete, AD\_ClassManager\_Search, AD\_ClassManager\_Detail, AD\_ClassManager\_AssignTeacher, AD\_ClassManager\_AssignStudent
+* Activity Diagram: [AD_ClassManager.puml]
+* Form liên quan: SCR_ClassManager
+* Các use case chi tiết: AD_ClassManager_Create, AD_ClassManager_Update, AD_ClassManager_Delete, AD_ClassManager_Search, AD_ClassManager_Detail, AD_ClassManager_AssignTeacher, AD_ClassManager_AssignStudent
