@@ -33,7 +33,7 @@ if (Có quyền truy cập?) then (Có)
         :Đóng popup;
         :Quay lại danh sách lớp học\n(**SCR_ClassManager**);
     endswitch
-
+g
 else (Không)
   :Thông báo không có quyền truy cập;
   :Đóng popup;
