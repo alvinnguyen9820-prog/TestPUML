@@ -7,46 +7,48 @@ entity Teacher
 entity Enrollment
 entity ClassTeacher
 entity Class {
-  * classId: int    - Mã lớp học, tự động tăng
-  * className: string      - Tên lớp học
-  * startDate: datetime      - Thời gian bắt đầu
-  * endDate: datetime   - Thời gian kết thúc
-  * countStudent: int      - Tổng số lượng sinh viên được phân công
-  * createdAt: datetime - Ngày tạo
-  * updatedAt: int      - Ngày cập nhật
+  * classId: BIGINT PK AUTO - Mã lớp học, tự động tăng
+  * className: VARCHAR(255) NOT NULL - Tên lớp học
+  * startDate: datetime - Thời gian bắt đầu
+  * endDate: datetime - Thời gian kết thúc
+  * countStudent: INT - Tổng số lượng sinh viên được phân công
+  * createdAt: datetime NOT NULL DEFAULT now() - Ngày tạo
+  * updatedAt: datetime NOT NULL DEFAULT now() - Ngày cập nhật
 
 }
 entity Student {
-  * studentId: int    - Mã sinh viên, tự động tăng
-  * studentName: string    - Tên sinh viên
-  * gender: int        - Giới tính
-  * dob: datetime   - Ngày sinh
-  * status: int    - Trạng thái (Đang học, Đã tốt nghiệp, Bảo lưu, Nghỉ)
-  * createdAt: datetime - Ngày tạo
-  * updatedAt: int      - Ngày cập nhật
+  * studentId: BIGINT PK AUTO - Mã sinh viên, tự động tăng
+  * studentName: VARCHAR(255) NOT NULL - Tên sinh viên
+  * gender: int - Giới tính
+  * dob: datetime - Ngày sinh
+  * status: int - Trạng thái (Đang học, Đã tốt nghiệp, Bảo lưu, Nghỉ)
+  * createdAt: datetime NOT NULL DEFAULT now() - Ngày tạo
+  * updatedAt: datetime NOT NULL DEFAULT now() - Ngày cập nhật
 }
 entity Teacher {
-  * teacherId: int - Mã giảng viên, tự động tăng
-  * teacherName: string    - Tên giảng viên
-  * gender: int    - Giới tính
+  * teacherId: BIGINT PK AUTO - Mã giảng viên, tự động tăng
+  * teacherName: VARCHAR(255) NOT NULL - Tên giảng viên
+  * gender: int - Giới tính
   * dob: datetime - Ngày sinh
-  * status: int    - Trạng thái (Đang dạy, đã nghỉ)
-  * createdAt: datetime - Ngày tạo
-  * updatedAt: int      - Ngày cập nhật
+  * status: int - Trạng thái (Đang dạy, đã nghỉ)
+  * createdAt: datetime NOT NULL DEFAULT now() - Ngày tạo
+  * updatedAt: datetime NOT NULL DEFAULT now() - Ngày cập nhật
 }
 entity Enrollment {
-  * id: int    - Mã bản ghi, tự động tăng
-  * classId: int    - Mã lớp học
-  * studentId: int      - Mã lớp học
-  * createdAt: datetime - Ngày tạo
-  * updatedAt: int      - Ngày cập nhật
+  * enrollmentId: BIGINT PK AUTO    - Mã bản ghi, tự động tăng
+  * classId: BIGINT NOT NULL FK → Class INDEX - Mã lớp học
+  * studentId: BIGINT NOT NULL FK → Student INDEX - Mã sinh viên
+  * createdAt: datetime NOT NULL DEFAULT now() - Ngày tạo
+  * updatedAt: datetime NOT NULL DEFAULT now() - Ngày cập nhật
+  -- UNIQUE(classId, studentId)
 }
 entity ClassTeacher {
-  * id: int    - Mã bản ghi, tự động tăng
-  * classId: int    - Mã lớp học
-  * teacherId: int  - Mã giảng viên
-  * createdAt: datetime - Ngày tạo
-  * updatedAt: int      - Ngày cập nhật
+  * classTeacherId: BIGINT PK AUTO - Mã bản ghi, tự động tăng
+  * classId: BIGINT NOT NULL FK → Class INDEX - Mã lớp học
+  * teacherId: BIGINT NOT NULL FK → Teacher INDEX - Mã giảng viên
+  * createdAt: datetime NOT NULL DEFAULT now() - Ngày tạo
+  * updatedAt: datetime NOT NULL DEFAULT now() - Ngày cập nhật
+  -- UNIQUE(classId, teacherId)
 }
 
 @enduml

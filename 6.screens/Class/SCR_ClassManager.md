@@ -26,6 +26,10 @@ Nơi tập trung để xem và quản lý lớp học.
 </div>
 
 ### Khác
+  - Phân trang 10 bản ghi
+  - Sắp xếp theo thứ tự ngày tạo
+
+### Chức năng
 
 <div style="overflow-x:auto">
 

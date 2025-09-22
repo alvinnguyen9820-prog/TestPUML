@@ -2,9 +2,9 @@
 note as CRUD_Matrix
 | Entity / Usecase | ClassManager | StudentManager | TeacherManager |
 | :--------------- | :----------- | :------------- | :------------- |
-| Class            | -            | -              | C R U D        |
+| Class            | C R U D      | -              | -              |
 | Student          | -            | C R U D        | -              |
-| Teacher          | C R U D      | -              | -              |
+| Teacher          | -            | -              | C R U D        |
 | Enrollment       | R            | R              | R              |
 | ClassTeacher     | R            | R              | R              |
 end note

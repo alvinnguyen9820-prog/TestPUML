@@ -1,4 +1,4 @@
-# Use Case: Quản lý loớ hoọ
+# Use Case: Quản lý lớp học
 
 ## Mục đích
 
