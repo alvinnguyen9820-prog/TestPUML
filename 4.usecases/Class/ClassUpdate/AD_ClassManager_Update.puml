@@ -4,17 +4,8 @@ title Activity Diagram: Chỉnh sửa lớp học
 
 start
 :Truy cập chức năng "Chỉnh sửa lớp học";
-
-if (Có quyền truy cập?) then (Có)
-  :Tìm kiếm lớp học 
-   (Chi tiết tại AD_ClassManager_Search);
-   else (Không)
-  :Thông báo không có quyền truy cập;
-  :Chuyển hướng đến trang chính;
-  stop
-endif
-
-  if (Tồn tại lớp học?) then (Có)
+:Chọn bản ghi cần chỉnh sửa;
+if (Được phép sửa) then (Có)
     :Hiển thị màn hình\n(**SCR_ClassUpdate**);
 
     :Nhập thông tin lớp học\n(tên lớp, thời gian bắt đầu, thời gian kết thúc);
@@ -49,9 +40,7 @@ endif
     endswitch
 
   else (Không)
-    :Thông báo "Không tìm thấy lớp học";
-    :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
-    stop
   endif
+
 stop
 @enduml

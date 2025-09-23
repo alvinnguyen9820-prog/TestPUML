@@ -10,6 +10,8 @@ Popup thêm mới sinh viên
 
 ## Thành phần
 
+## Rule/Quy taắ
+
 ### Bảng chính
 
 <div style="overflow-x:auto">

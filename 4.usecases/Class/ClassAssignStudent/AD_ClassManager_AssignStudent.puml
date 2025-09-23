@@ -1,0 +1,41 @@
+@startuml AD_ClassManager_AssignStudent
+!pragma layout smetana
+title Activity Diagram: Phân công sinh viên vào lớp học (Popup)
+
+start
+:Truy cập từ danh sách lớp học\n(btn "Phân công sinh viên");
+:Hiển thị popup phân công sinh viên\n(**SCR_AssignStudent**);
+
+if (Có thực hiện tìm kiếm?) then (Có)
+  :Nhập điều kiện tìm kiếm;
+  :Hiển thị danh sách sinh viên theo điều kiện;
+else (Không)
+  :Hiển thị danh sách sinh viên mặc định;
+endif
+
+:Chọn 1 hoặc nhiều sinh viên;
+
+:Chọn thao tác;
+switch (Thao tác?)
+  case (Lưu)
+    :Kiểm tra trùng phân công / trạng thái SV;
+    if (Hợp lệ & không trùng?) then (Đúng)
+      :Ghi nhận phân công sinh viên vào lớp;
+      if (Ghi thành công?) then (Có)
+        :Thông báo "Phân công sinh viên thành công";
+        :Chuyển về danh sách\n(**SCR_ClassManager**);
+      else (Không)
+        :Thông báo lỗi hệ thống;
+        :Ở lại popup\n(**SCR_AssignStudent**);
+      endif
+    else (Trùng/không hợp lệ)
+      :Thông báo "Sinh viên đã được phân công vào lớp học khác hoặc không hợp lệ";
+      :Ở lại popup\n(**SCR_AssignStudent**);
+    endif
+  case (Đóng)
+    :Đóng popup;
+    :Quay lại danh sách lớp học\n(**SCR_ClassManager**);
+endswitch
+
+stop
+@enduml

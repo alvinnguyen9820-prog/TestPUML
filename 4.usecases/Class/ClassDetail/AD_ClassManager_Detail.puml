@@ -4,14 +4,7 @@ title Activity Diagram: Xem chi tiết lớp học
 
 start
 :Truy cập chức năng "Xem chi tiết lớp học";
-if (Có quyền truy cập?) then (Có)
-    :Hiển thị màn hình\n(**SCR_ClassDetail**);
-else (Không)
-  :Thông báo không có quyền truy cập;
-  :Chuyển hướng đến trang chính;
-  stop
-endif
-  :Chọn thao tác;
+:Chọn thao tác;
 
   switch (Thao tác?)
     case (Xóa)
@@ -35,4 +28,5 @@ endif
       endif
   endswitch
   stop
+  
 @enduml

@@ -9,6 +9,7 @@ Popup thêm mới giảng viên
 [https://www.figma.com/design/STv6BI8XR469xhObHjgCHs/Test-Puml?node-id=1-25058&t=wrQJFoVLqh8Cg2iN-0]
 
 ## Thành phần
+## rule/Quy tắc
 
 ### Bảng chính
 

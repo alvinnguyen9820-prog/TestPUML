@@ -15,10 +15,11 @@ Popup xóa lớp học
 
 <div style="overflow-x:auto">
 
-| Tên      | Loại   | Mô tả                  |
-| :------- | :----- | :--------------------- |
-| Xác nhận | Button | Click để thực hiện xóa |
-| Đóng     | Button | Click vào đóng popup   |
+| Tên                  | Loại   | Mô tả                              |
+| :------------------- | :----- | :--------------------------------- |
+| Xac nhân xóa bản ghi | text   | Xác nhận xóa lớp học + Tên lớp học |
+| Xác nhận             | Button | Click để thực hiện xóa             |
+| Đóng                 | Button | Click vào đóng popup               |
 
 
 

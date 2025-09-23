@@ -4,11 +4,7 @@ title Activity Diagram: Xóa lớp học (Popup)
 
 start
 :Truy cập chức năng "Xóa lớp học";
-
-if (Có quyền truy cập?) then (Có)
-  :Hiển thị popup xác nhận xóa\n(**SCR_ClassDelete**);
-
-  switch (Xác nhận xóa?)
+switch (Xác nhận xóa?)
     case (Đồng ý)
       :Kiểm tra điều kiện/xung đột xóa\n(đang phân công GV/SV, đã khóa...);
         if (Đủ điều kiện xóa?) then (Đủ)
@@ -33,11 +29,5 @@ if (Có quyền truy cập?) then (Có)
         :Ở lại màn hình\n(**SCR_ClassDelete**);
       endif
   endswitch
-
-else (Không)
-  :Thông báo không có quyền truy cập;
-  :Đóng popup;
-  :Chuyển hướng đến trang chính;
-endif
 stop
 @enduml
