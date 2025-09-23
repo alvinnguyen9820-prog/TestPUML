@@ -3,7 +3,7 @@
 title Activity Diagram: Xóa lớp học (Popup)
 
 start
-:Truy cập chức năng "Xóa lớp học";
+:Chọn 1 bản ghi cần xóa;
 switch (Xác nhận xóa?)
     case (Đồng ý)
       :Kiểm tra điều kiện/xung đột xóa\n(đang phân công GV/SV, đã khóa...);
@@ -12,22 +12,14 @@ switch (Xác nhận xóa?)
           if (Xóa thành công?) then (Có)
             :Thông báo "Xóa lớp học thành công";
             :Đóng popup;
-            :Chuyển hướng về danh sách\n(**SCR_ClassManager**);
           else (Không)
             :Thông báo lỗi hệ thống;
-            :Ở lại popup\n(**SCR_ClassDelete**);
           endif
         else (Không)
           :Thông báo "Không thể xóa do đang có phân công/đăng ký";
-          :Ở lại popup\n(**SCR_ClassDelete**);
         endif
     case (Đóng)
-      :Xác nhận đóng?;
-      if (Đồng ý?) then (Có)
-        :Quay về danh sách lớp học\n(**SCR_ClassManager**);
-      else (Không)
-        :Ở lại màn hình\n(**SCR_ClassDelete**);
-      endif
+      
   endswitch
 stop
 @enduml

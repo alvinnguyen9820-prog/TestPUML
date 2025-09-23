@@ -1,0 +1,15 @@
+@startuml AD_ClassList
+!pragma layout smetana
+title Activity Diagram - Quản lý danh sách lớp học
+
+start
+:Truy cập chức năng quản lý lớp học;
+
+if (Có quyền truy cập?) then (Có)
+  :Hiển thị danh sách\n(**SCR_ClassList**);
+else (Không)
+  :Thông báo không có quyền truy cập;
+  :Chuyển hướng đến trang chính;
+endif
+stop
+@enduml

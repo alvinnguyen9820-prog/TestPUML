@@ -42,4 +42,4 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
 
 * Activity Diagram: [AD_ClassManager.puml]
 * Form liên quan: SCR_ClassManager
-* Các use case chi tiết: AD_ClassManager_Create, AD_ClassManager_Update, AD_ClassManager_Delete, AD_ClassManager_Search, AD_ClassManager_Detail, AD_ClassManager_AssignTeacher, AD_ClassManager_AssignStudent
+* Các use case chi tiết: UC_ClassManager_Create, UC_ClassManager_Update, UC_ClassManager_Delete, UC_ClassManager_Search, UC_ClassManager_Detail, UC_ClassManager_AssignTeacher, UCClassManager_AssignStudent
