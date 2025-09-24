@@ -1,6 +1,14 @@
 # Use Case: Phân công giảng viên
-## Mục đích
-Cho phép người dùng phân công giảng viên vào lớp học.
+
+## User Story
+- Là quản trị viên, tôi muốn có thể thực hiện phân công một hoặc nhiều giảng viên vào lớp học đã tạo, để có thể quản lý danh sách giảng viên trong lớp học
+
+## Acceptance criteria
+- Hệ thống hiển thị thành công form phân công giảng viên, trong form hiển thị danh sách giảng viên (tên) và checkbox lựa chọn giảng viên
+- Người dùng tìm kiếm thành công giảng viên để thêm vào lớp
+- Hệ thống hiển thị kết quả đánh dấu danh sách giảng viên của người dùng
+- Sau khi bấm lưu, hệ thống cập nhật thành công danh sách giảng viên trong lớp học
+
 ## Tác nhân chính
 ⦁	Người dùng (có quyền phân công giảng viên vào lớp học)
 ## Tiền điều kiện

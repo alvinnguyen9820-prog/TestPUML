@@ -15,7 +15,7 @@
 
 ## Tác nhân chính
 
-* Admin
+* Người dùng (có quyền xem danh sách lớp học)
 
 ## Tiền điều kiện
 
@@ -48,4 +48,4 @@
 
 * Activity Diagram: [AD_ClassManager_List.puml]
 * Form liên quan: SCR_ClassManager
-* Các Entity liên quan: Class 
+* Các Entity liên quan: ENT_Class 

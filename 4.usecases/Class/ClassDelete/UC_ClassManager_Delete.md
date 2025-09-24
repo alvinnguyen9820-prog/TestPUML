@@ -45,4 +45,4 @@
 ## Liên kết
 *	Activity Diagram: [AD_ClassManager_Delete.puml]
 *	Form liên quan: SCR_ClassDelete
-*	Entity liên quan: ENT_Class
+*	Entity liên quan: ENT_Class.

@@ -6,8 +6,6 @@
 ## Acceptance criteria
 -  Khi quản trị viên chọn Thêm mới lớp học, hệ thống hiển thị form nhập thông tin lớp học với các trường:
     - Tên lớp (bắt buộc)
-    - Chọn giảng viên từ danh sách đã có
-    - Chọn sinh viên từ danh sách đã có
     - Ngày bắt đầu (bắt buộc)
     - Ngày kết thúc (bắt buộc)
 - Nếu để trống trường bắt buộc, hệ thống hiển thị thông báo lỗi: "Vui lòng nhập đầy đủ thông tin bắt buộc".

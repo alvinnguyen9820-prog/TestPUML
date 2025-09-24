@@ -17,7 +17,7 @@
 
 ## Tác nhân chính
 
-* Admin
+* Người dùng (có quyền quản lý lớp học, chi tiết theo từng tính năng)
 
 ## Tiền điều kiện
 
@@ -56,4 +56,4 @@
 * Activity Diagram: [AD_ClassManager.puml]
 * Form liên quan: SCR_ClassManager
 * Các use case chi tiết: UC_ClassManager_Create, UC_ClassManager_Update, UC_ClassManager_Delete, UC_ClassManager_Search, UC_ClassManager_Detail, UC_ClassManager_AssignTeacher, UCClassManager_AssignStudent
-* Các entity liên quan: Class, Student, Teacher, Enrollment, ClassTeacher
+* Các entity liên quan: ENT_Class, ENT_Student, ENT_Teacher, ENT_Enrollment, ENT_ClassTeacher

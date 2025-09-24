@@ -34,4 +34,4 @@
 ## Liên kết
 ⦁	Activity Diagram: [AD_ClassManager_Search.puml]
 ⦁	Form liên quan: SCR_ClassSearch
-⦁	Entity liên quan: Class
+⦁	Entity liên quan: ENT_Class

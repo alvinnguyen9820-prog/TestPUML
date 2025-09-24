@@ -1,6 +1,15 @@
 # Use Case: Phân công sinh viên
-## Mục đích
-Cho phép người dùng phân công sinh viên vào lớp học.
+
+## User Story
+- Là quản trị viên, tôi muốn có thể thực hiện phân công một hoặc nhiều sinh viên vào lớp học đã tạo, để có thể quản lý danh sách sinh viên trong lớp học
+
+## Acceptance criteria
+- Hệ thống hiển thị thành công form phân công sinh viên, trong form hiển thị danh sách sinh viên (tên) và checkbox lựa chọn sinh viên
+- Người dùng tìm kiếm thành công sinh viên để thêm vào lớp
+- Hệ thống hiển thị kết quả đánh dấu danh sách sinh viên của người dùng
+- Sau khi bấm lưu, hệ thống cập nhật thành công danh sách sinh viên trong lớp học nếu các dữ liệu đều hợp lệ
+- Nếu sinh viên bị trùng thời gian học hoặc sinh viên đã nghỉ học, hệ thống hiển thị cảnh báo lỗi "Sinh viên A đã được phân công vào lớp học khác hoặc sinh viên đã nghỉ học"
+
 ## Tác nhân chính
 ⦁	Người dùng (có quyền phân công sinh viên vào lớp học)
 ## Tiền điều kiện

@@ -7,8 +7,6 @@
 - Khi quản trị viên chọn Chỉnh sửa lớp học, hệ thống hiển thị form thông tin lớp học đã lưu sẵn. Các thông tin đã lưu được hiển thị trong form
 - Hệ thống cho phép chỉnh sửa các trường:
     - Tên lớp (bắt buộc)
-    - Chọn giảng viên từ danh sách đã có
-    - Chọn sinh viên từ danh sách đã có
     - Ngày bắt đầu (bắt buộc)
     - Ngày kết thúc (bắt buộc)
 - Nếu quản trị viên để trống trường bắt buộc, hệ thống hiển thị thông báo lỗi: "Vui lòng nhập đầy đủ thông tin bắt buộc"
@@ -47,4 +45,4 @@
 ## Liên kết
 ⦁	Activity Diagram: [AD_ClassManager_Update.puml]
 ⦁	Form liên quan: SCR_ClassUpdate
-⦁	Entity liên quan: Class
+⦁	Entity liên quan: ENT_Class
