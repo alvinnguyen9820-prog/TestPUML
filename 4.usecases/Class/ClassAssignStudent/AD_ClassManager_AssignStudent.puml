@@ -23,7 +23,7 @@ switch (Thao tác?)
       :Ghi nhận phân công sinh viên vào lớp;
       if (Ghi thành công?) then (Có)
         :Thông báo "Phân công sinh viên thành công";
-        :Chuyển về danh sách\n(**SCR_ClassManager**);
+        :Đóng popup phân công sinh viên;
       else (Không)
         :Thông báo lỗi hệ thống;
         :Ở lại popup\n(**SCR_AssignStudent**);
