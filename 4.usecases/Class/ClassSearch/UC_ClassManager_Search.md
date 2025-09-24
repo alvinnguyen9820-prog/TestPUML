@@ -1,7 +1,13 @@
 # Use Case: Tìm kiếm lớp học
 
-## Mục đích
-Cho phép người dùng tìm kiếm lớp học.
+## User Story
+- Là Quản trị viên, tôi muốn tìm kiếm lớp học theo tên lớp học, để có thể truy xuất thông tin nhanh nhất.
+
+## Acceptance criteria
+- Khi quản trị viên truy cập danh sách lớp học, hệ thống hiển thị thanh tìm kiếm.
+- Quản trị viên nhập thông tin tìm kiếm và nhấn Tìm kiếm hoặc gõ enter, hệ thống hiển thị danh sách lớp học theo tên lớp đã điền với kết quả gần đúng.
+- Nếu không tìm thấy lớp học nào, hệ thống hiển thị thông báo: "Không tìm thấy lớp học phù hợp".
+
 ## Tác nhân chính
 ⦁	Người dùng (có quyền tìm kiếm lớp học)
 ## Tiền điều kiện
@@ -28,4 +34,4 @@ Cho phép người dùng tìm kiếm lớp học.
 ## Liên kết
 ⦁	Activity Diagram: [AD_ClassManager_Search.puml]
 ⦁	Form liên quan: SCR_ClassSearch
-⦁	Entity liên quan: ENT_Class
+⦁	Entity liên quan: Class

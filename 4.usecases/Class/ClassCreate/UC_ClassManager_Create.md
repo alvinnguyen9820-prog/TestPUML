@@ -1,6 +1,20 @@
 # Use Case: Thêm mới lớp học
-## Mục đích
-Cho phép người dùng tạo mới lớp học.
+
+## User Story
+- Là Quản trị viên, tôi muốn thêm mới lớp học, để có thể quản lý danh sách và thông tin trong hệ thống
+
+## Acceptance criteria
+-  Khi quản trị viên chọn Thêm mới lớp học, hệ thống hiển thị form nhập thông tin lớp học với các trường:
+    - Tên lớp (bắt buộc)
+    - Chọn giảng viên từ danh sách đã có
+    - Chọn sinh viên từ danh sách đã có
+    - Ngày bắt đầu (bắt buộc)
+    - Ngày kết thúc (bắt buộc)
+- Nếu để trống trường bắt buộc, hệ thống hiển thị thông báo lỗi: "Vui lòng nhập đầy đủ thông tin bắt buộc".
+- Nếu ngày bắt đầu >= ngày kết thúc, hệ thống hiển thị thông báo lỗi: "Ngày bắt đầu phải nhỏ hơn ngày kết thúc".
+- Khi dữ liệu hợp lệ và nhấn Lưu, hệ thống lưu lớp học mới và hiển thị trong danh sách
+- Sau khi lưu thành công, hệ thống hiển thị thông báo: "Thêm mới lớp học thành công".
+
 ## Tác nhân chính
 ⦁	Người dùng (có quyền tạo mới lớp học)
 ## Tiền điều kiện

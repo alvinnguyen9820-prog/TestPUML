@@ -1,8 +1,19 @@
 # Use Case: Quản lý lớp học
 
-## Mục đích
+## User Story
 
-Cho phép người dùng thực hiện các thao tác quản lý lớp học: thêm mới, chỉnh sửa, xóa, tìm kiếm, xem chi tiết, phân công giảng viên, phân công sinh viên
+- Là một quản trị viên, tôi muốn quản lý lớp (thêm mới, chỉnh sửa, xóa, tìm kiếm, xem chi tiết, phân công giảng viên và sinh viên vào lớp) để đảm bảo thông tin lớp học luôn đầy đủ, chính xác và hỗ trợ hiệu quả cho công tác phân công giảng dạy, quản lý sinh viên.
+
+## Acceptance Criteria
+- Hệ thống cho phép quản trị viên thêm mới lớp học với đầy đủ thông tin bắt buộc.
+- Hệ thống cho phép quản trị viên chỉnh sửa thông tin lớp học đã tồn tại.
+- Hệ thống cho phép quản trị viên xóa lớp học và xác nhận trước khi xóa.
+- Hệ thống cho phép quản trị viên tìm kiếm lớp học theo tên lớp.
+- Hệ thống cho phép quản trị viên xem chi tiết thông tin lớp học với đầy đủ dữ liệu liên quan bao gồm thông tin lớp, danh sách giảng viên, danh sách sinh viên.
+- Hệ thống cho phép quản trị viên phân công giảng viên vào lớp theo danh sách có sẵn.
+- Hệ thống cho phép quản trị viên gán sinh viên vào lớp theo danh sách có sẵn.
+- Hệ thống cho phép quản trị viên chỉnh sửa hoặc hủy phân công giảng viên/sinh viên khỏi lớp.
+- Giao diện phải thông báo kết quả thao tác (thành công/thất bại) cho quản trị viên.
 
 ## Tác nhân chính
 
@@ -28,7 +39,9 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
 
 4. Hệ thống thực hiện thao tác tương ứng và thông báo kết quả.
 
-## Luồng phụ/ngoại lệ
+## Luồng phụ
+
+## Ngoại lệ
 
 * Người dùng không có quyền truy cập: Hệ thống hiển thị thông báo lỗi và không cho phép thao tác.
 * Người dùng hủy thao tác: Use case kết thúc, không thay đổi dữ liệu.
@@ -43,3 +56,4 @@ Cho phép người dùng thực hiện các thao tác quản lý lớp học: th
 * Activity Diagram: [AD_ClassManager.puml]
 * Form liên quan: SCR_ClassManager
 * Các use case chi tiết: UC_ClassManager_Create, UC_ClassManager_Update, UC_ClassManager_Delete, UC_ClassManager_Search, UC_ClassManager_Detail, UC_ClassManager_AssignTeacher, UCClassManager_AssignStudent
+* Các entity liên quan: Class, Student, Teacher, Enrollment, ClassTeacher

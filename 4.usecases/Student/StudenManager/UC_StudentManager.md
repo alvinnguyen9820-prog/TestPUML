@@ -1,8 +1,15 @@
 # Use Case: Quản lý sinh viên
 
-## Mục đích
+## User Story
+- Là một quản trị viên, tôi muốn quản lý sinh viên (thêm mới, chỉnh sửa, xóa, tìm kiếm, xem chi tiết) để đảm bảo dữ liệu sinh viên luôn đầy đủ, chính xác.
 
-Cho phép người dùng thực hiện các thao tác quản lý sinh viên: thêm mới, chỉnh sửa, xóa, tìm kiếm, xem chi tiết
+## Acceptance criteria
+- Hệ thống cho phép quản trị viên thêm mới sinh viên.
+- Hệ thống cho phép quản trị viên chỉnh sửa thông tin sinh viên đã tồn tại.
+- Hệ thống cho phép quản trị viên xóa sinh viên và xác nhận trước khi xóa.
+- Hệ thống cho phép quản trị viên tìm kiếm sinh viên theo tên sinh viên.
+- Hệ thống cho phép quản trị viên xem chi tiết hồ sơ sinh viên với đầy đủ thông tin.
+- Giao diện phải thông báo kết quả thao tác (thành công/thất bại) cho quản trị viên.
 
 ## Tác nhân chính
 
