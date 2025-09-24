@@ -3,7 +3,7 @@
 left to right direction
 entity Class #A5D6A7
 entity Student
-entity Teacher
+entity Teacher 
 entity Enrollment
 entity ClassTeacher
 

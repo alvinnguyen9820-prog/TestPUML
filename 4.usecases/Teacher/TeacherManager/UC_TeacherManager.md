@@ -1,8 +1,16 @@
 # Use Case: Quản lý giảng viên
 
-## Mục đích
+## User Story
 
-Cho phép người dùng thực hiện các thao tác quản lý giảng viên: thêm mới, chỉnh sửa, xóa, tìm kiếm, xem chi tiết
+Là một quản trị viên, tôi muốn có thể thực hiện quản lý giảng viên (thêm, sửa, xóa, tìm kiếm, xem chi tiết) để đảm bảo dữ liệu giảng viên luôn đầy đủ, chính xác
+
+## Acceptance criteria
+- Hệ thống cho phép quản trị viên thêm mới giảng viên.
+- Hệ thống cho phép quản trị viên chỉnh sửa thông tin giảng viên đã tồn tại.
+- Hệ thống cho phép quản trị viên xóa giảng viên và xác nhận trước khi xóa.
+- Hệ thống cho phép quản trị viên tìm kiếm giảng viên theo tên giảng viên.
+- Hệ thống cho phép quản trị viên xem chi tiết hồ sơ giảng viên với đầy đủ thông tin.
+- Giao diện phải thông báo kết quả thao tác (thành công/thất bại) cho quản trị viên.
 
 ## Tác nhân chính
 
@@ -40,4 +48,4 @@ Cho phép người dùng thực hiện các thao tác quản lý giảng viên: 
 
 * Activity Diagram: [AD_TeacherManager.puml]
 * Form liên quan: SCR_TeacherManager
-* Các use case chi tiết: AD_TeacherManager_Create, AD_TeacherManager_Update, AD_TeacherManager_Delete, AD_TeacherManager_Search, AD_TeacherManager_Detail
+* Các use case chi tiết: UC_TeacherManager_Create, UC_TeacherManager_Update, UC_TeacherManager_Delete, UC_TeacherManager_Search, UC_TeacherManager_Detail
